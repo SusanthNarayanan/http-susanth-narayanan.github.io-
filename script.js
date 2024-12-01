@@ -20,3 +20,15 @@ links.forEach(link => {
         });
     });
 });
+
+// Function to toggle the visibility of the menu with smooth effect
+function toggleMenu() {
+    const navbarLinks = document.getElementById("navbarLinks");
+    navbarLinks.classList.toggle("open");
+    const toggleButton = document.querySelector('.toggle-btn');
+    if (navbarLinks.classList.contains('open')) {
+        toggleButton.innerHTML = '&times;';  // Change to close icon
+    } else {
+        toggleButton.innerHTML = '&#9776;';  // Change to hamburger icon
+    }
+}
